@@ -9,6 +9,12 @@
 #ifndef First_Game_Game_h
 #define First_Game_Game_h
 
+class Game {
+public:
+    Game();
+private:
+    
+};
 
 
 #endif
