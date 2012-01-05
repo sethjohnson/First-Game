@@ -30,10 +30,14 @@ private: // Methods
     long getTickCount();
 
 private: // Variables
-    sf::Window App;
+    sf::RenderWindow App;
+    sf::View   View;
     bool fullscreen;
-
+    sf::Vector2f center;
     sf::Vector2i screen_size;
+    
+    sf::Image background_image;
+    sf::Sprite background_sprite;
 private: // Constants
     const int TICKS_PER_SECOND;
     const int SKIP_TICKS;
