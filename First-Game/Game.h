@@ -9,10 +9,29 @@
 #ifndef First_Game_Game_h
 #define First_Game_Game_h
 
-class Game {
+#include <SFML/Graphics.hpp>
+
+class Game 
+{
 public:
     Game();
-private:
+    int game_loop();
+    
+private: // Methods
+    void update_game();
+    void render_game();
+    void handle_input();
+    void handle_events();
+    
+private: // Varaibles
+    sf::Window App;
+private: // Constants
+    const int TICKS_PER_SECOND;
+    const int SKIP_TICKS;
+    const int MAX_FRAMESKIP;
+
+    long  getTickCount();
+
     
 };
 
