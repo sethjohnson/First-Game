@@ -125,8 +125,8 @@ void Game::handle_events()
                 App.Close();
                 break;
             case sf::Event::Resized: 
-                View.SetHalfSize(Event.Size.Width/2, Event.Size.Height/2);
-                
+                View.SetHalfSize(Event.Size.Width/2, Event.Size.Height/2); //Resize the display view
+                App.GetDefaultView().SetFromRect(sf::Rect<float>(0, 0, Event.Size.Width, Event.Size.Height)); // Resize the actual window view (Used for HUD for now)
                 break;  
 
             case sf::Event::KeyPressed:
