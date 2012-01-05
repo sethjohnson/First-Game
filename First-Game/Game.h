@@ -38,6 +38,9 @@ private: // Variables
     
     sf::Image background_image;
     sf::Sprite background_sprite;
+    sf::String fps_string;
+    char s[20];
+    
 private: // Constants
     const int TICKS_PER_SECOND;
     const int SKIP_TICKS;

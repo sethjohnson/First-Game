@@ -26,6 +26,7 @@ Game::Game()  : title("Untitled"),
 
 void Game::init_video()
 {
+    App.SetFramerateLimit(FRAME_LIMIT);
     if (fullscreen) 
     {
         App.Create(sf::VideoMode::GetMode(0), title, sf::Style::Fullscreen);
@@ -43,6 +44,11 @@ void Game::init_game()
     View.SetCenter(center);
     View.SetHalfSize(screen_size.x/2, screen_size.y/2);
     background_sprite.SetPosition(center.x-background_sprite.GetSize().x/2, center.y-background_sprite.GetSize().y/2);
+    
+    fps_string.SetColor(sf::Color(255, 255, 255));
+    fps_string.SetPosition(5, 5);
+    fps_string.SetSize(20.f);
+
 
 }
 
@@ -64,7 +70,7 @@ int Game::game_loop()
         
         while (getTickCount() > next_game_tick && loops < MAX_FRAMESKIP)
         {
-            //handle_input();
+            handle_input();
             update_game();
             next_game_tick += SKIP_TICKS;
             loops++;
@@ -94,10 +100,17 @@ void Game::update_game()
 
 void Game::render_game()
 {
+    
+    sprintf(s, "fps: %.2f",1./App.GetFrameTime());
+    fps_string.SetText(s);
     App.SetView(View);
     
     App.Clear();
     App.Draw(background_sprite);
+    
+    App.SetView(App.GetDefaultView());
+    App.Draw(fps_string);
+
     App.Display();
 }
 
@@ -143,4 +156,9 @@ void Game::handle_events()
         }
     }
 
+}
+
+void Game::handle_input()
+{
+    
 }
