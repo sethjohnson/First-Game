@@ -102,6 +102,8 @@ void Game::render_game()
 {
     std::ostringstream oss;
     oss << "fps: " << 1./App.GetFrameTime();
+    oss << "\n";
+    oss << App.GetWidth() << " x " << App.GetHeight();
     fps_string.SetText(oss.str());
     
     App.SetView(View);
