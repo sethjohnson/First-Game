@@ -100,6 +100,15 @@ void Game::update_game()
 
 void Game::render_game()
 {
+
+    Button b;
+    b.setCenter(App.GetDefaultView().GetCenter().x, App.GetDefaultView().GetCenter().y-20);
+    b.setDimensions(200, 50);
+    b.setText("Hello");
+    Interface i;
+    
+    i.entities.push_back(&b);
+    
     std::ostringstream oss;
     oss << "fps: " << 1./App.GetFrameTime();
     oss << "\n";
@@ -113,6 +122,7 @@ void Game::render_game()
     
     App.SetView(App.GetDefaultView());
     App.Draw(fps_string);
+    i.entities[0]->draw(App);
 
     App.Display();
 }

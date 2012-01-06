@@ -12,6 +12,9 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <sstream>
+#include "Button.h"
+#include "Interface.h"
+
 using std::string;
 
 class Game 
