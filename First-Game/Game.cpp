@@ -39,7 +39,7 @@ void Game::init_video()
 
 void Game::init_game()
 {
-    background_image.LoadFromFile("background.JPG");
+    background_image.LoadFromFile("background.tga");
     background_sprite.SetImage(background_image);
     View.SetCenter(center);
     View.SetHalfSize(screen_size.x/2, screen_size.y/2);
