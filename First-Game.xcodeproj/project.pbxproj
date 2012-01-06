@@ -45,7 +45,6 @@
 		9F39198C14B552C000B51067 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
 		9F39198D14B552C000B51067 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
 		9F39198E14B552C000B51067 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
-		9F39199914B55E3B00B51067 /* background.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.JPG; path = "First-Game/background.JPG"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +91,6 @@
 		9F39197214B54B9D00B51067 /* First-Game */ = {
 			isa = PBXGroup;
 			children = (
-				9F39199914B55E3B00B51067 /* background.JPG */,
 				9F39197314B54B9D00B51067 /* main.cpp */,
 				9F39197514B54B9D00B51067 /* First_Game.1 */,
 				9F39197C14B54C9400B51067 /* Game.h */,
@@ -240,6 +238,7 @@
 				9F39197B14B54B9D00B51067 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
