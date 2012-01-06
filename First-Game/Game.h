@@ -11,7 +11,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
-
+#include <sstream>
 using std::string;
 
 class Game 
@@ -38,8 +38,7 @@ private: // Variables
     
     sf::Image background_image;
     sf::Sprite background_sprite;
-    sf::String fps_string;
-    char s[20];
+    sf::String fps_string;    
     
 private: // Constants
     const int TICKS_PER_SECOND;

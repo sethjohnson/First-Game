@@ -7,7 +7,7 @@
 //
 
 #include "Game.h"
-#include <iostream>
+
 
 Game::Game()  : title("Untitled"),
                 FRAME_LIMIT(120),
@@ -100,9 +100,10 @@ void Game::update_game()
 
 void Game::render_game()
 {
+    std::ostringstream oss;
+    oss << "fps: " << 1./App.GetFrameTime();
+    fps_string.SetText(oss.str());
     
-    sprintf(s, "fps: %.2f",1./App.GetFrameTime());
-    fps_string.SetText(s);
     App.SetView(View);
     
     App.Clear();
