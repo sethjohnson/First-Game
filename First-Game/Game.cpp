@@ -147,9 +147,9 @@ void Game::handle_events()
                     }
                     else
                     {
-                        View.SetCenter(center);
-                        View.SetHalfSize(1024, 576);
                         App.Create(sf::VideoMode::GetMode(0), title, sf::Style::Fullscreen);
+                        View.SetCenter(center);
+                        View.SetHalfSize(App.GetWidth()/2, App.GetHeight()/2);
                         fullscreen = true;
                         
                     }
