@@ -5,3 +5,6 @@
 * Everybody's got them.
 
 * But beans still taste awful. Just saying.
+
+# Anyways. Important stuff:
+# By Seth and Matt
