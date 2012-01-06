@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F239EE714B672F100168482 /* background.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.tga; sourceTree = "<group>"; };
 		9F39196F14B54B9D00B51067 /* First-Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "First-Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F39197314B54B9D00B51067 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9F39197514B54B9D00B51067 /* First_Game.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = First_Game.1; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		9F39197214B54B9D00B51067 /* First-Game */ = {
 			isa = PBXGroup;
 			children = (
+				9F239EE714B672F100168482 /* background.tga */,
 				9F39197314B54B9D00B51067 /* main.cpp */,
 				9F39197514B54B9D00B51067 /* First_Game.1 */,
 				9F39197C14B54C9400B51067 /* Game.h */,
