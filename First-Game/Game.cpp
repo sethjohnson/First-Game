@@ -131,7 +131,8 @@ void Game::handle_events()
                 break;  
 
             case sf::Event::KeyPressed:
-                if (Event.Key.Code == sf::Key::F) {
+                if (Event.Key.Code == sf::Key::F)
+                {
                     if (fullscreen) 
                     {
                         App.Create(sf::VideoMode(screen_size.x, screen_size.y),title);
@@ -152,6 +153,10 @@ void Game::handle_events()
                     }
                     
                 }
+				else if(Event.Key.Code == sf::Key::Escape)
+				{
+					App.Close();
+				}
             default:
                 break;
         }
