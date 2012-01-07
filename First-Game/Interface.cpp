@@ -23,7 +23,7 @@ Entity* Interface::object_with_point(sf::Vector2f point)
     std::cout << "Size: " << entities.size() << " ; Empty: " << entities.empty() << std::endl;
     
     for(std::vector<Entity*>::reverse_iterator it = entities.rbegin(); 
-        it != entities.rend()&& (result = ((*it)->contains_point(point))); 
+        it != entities.rend()&& !(result = ((*it)->contains_point(point))); 
     ++it);
     
    

@@ -15,7 +15,7 @@
 
 class Entity  {
 protected:
-    
+    bool clickable;
 public:
     virtual void draw(sf::RenderWindow &w) = 0;
     virtual Entity* contains_point(sf::Vector2f point) =0;

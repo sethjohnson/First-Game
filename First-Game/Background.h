@@ -15,7 +15,7 @@ class Background : public Entity {
 public:
     void draw(sf::RenderWindow &w);
     void setColor(sf::Color c) {color = c;}
-    Entity* contains_point(sf::Vector2f point){return this;}
+    Entity* contains_point(sf::Vector2f point);
 
 protected:
     sf::Color color;

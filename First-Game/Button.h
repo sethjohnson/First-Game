@@ -15,6 +15,9 @@ using std::string;
 class Button : public Entity  {
     
 public:
+    Button() {
+        clickable = true;
+    }
     void draw(sf::RenderWindow &w);
 
     void setCenter(float x, float y) { center.x = x; center.y = y;}

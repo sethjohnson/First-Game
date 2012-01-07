@@ -24,11 +24,11 @@ void Button::draw(sf::RenderWindow &w)
 
 Entity* Button::contains_point(sf::Vector2f point)
 {
+    if (clickable)
     if ((point.x>center.x-dimensions.x/2) && (point.x < center.x+dimensions.x/2)
         &&
         point.y>center.y-dimensions.y/2 && point.y < center.y+dimensions.y/2) {
         return this;
     }
-    else
         return NULL;
 }

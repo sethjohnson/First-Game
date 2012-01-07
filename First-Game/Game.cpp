@@ -62,7 +62,7 @@ void Game::init_game()
     bg->setColor(sf::Color(126,126,126,126));
     
     
-    //interfaces[0]->entities.push_back(bg);
+    interfaces[0]->entities.push_back(bg);
     interfaces[0]->entities.push_back(b);
 
 }
