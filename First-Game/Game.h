@@ -12,8 +12,12 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <sstream>
+#include <iostream>
+
 #include "Button.h"
 #include "Interface.h"
+#include "Background.h"
+#include <algorithm>
 
 using std::string;
 
@@ -42,6 +46,9 @@ private: // Variables
     sf::Image background_image;
     sf::Sprite background_sprite;
     sf::String fps_string;    
+    sf::Vector2f cursor_pos;
+
+    std::vector<Interface*> interfaces;
     
 private: // Constants
     const int TICKS_PER_SECOND;

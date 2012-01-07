@@ -50,6 +50,21 @@ void Game::init_game()
     fps_string.SetSize(20.f);
 
 
+    Interface* i = new Interface;
+    interfaces.clear();
+    interfaces.push_back(i);
+    Button* b = new Button;
+    b->setCenter(400, 300-20);
+    b->setDimensions(400, 50);
+    b->setText("Return to Game");
+    
+    Background* bg = new Background;
+    bg->setColor(sf::Color(126,126,126,126));
+    
+    
+    //interfaces[0]->entities.push_back(bg);
+    interfaces[0]->entities.push_back(b);
+
 }
 
 // game_loop()
@@ -98,17 +113,12 @@ void Game::update_game()
     
 }
 
+
+
 void Game::render_game()
 {
 
-    Button b;
-    b.setCenter(App.GetDefaultView().GetCenter().x, App.GetDefaultView().GetCenter().y-20);
-    b.setDimensions(200, 50);
-    b.setText("Hello");
-    Interface i;
-    
-    i.entities.push_back(&b);
-    
+   
     std::ostringstream oss;
     oss << "fps: " << 1./App.GetFrameTime();
     oss << "\n";
@@ -122,7 +132,10 @@ void Game::render_game()
     
     App.SetView(App.GetDefaultView());
     App.Draw(fps_string);
-    i.entities[0]->draw(App);
+
+    for (vector<Interface*>::iterator it = interfaces.begin(); it!=interfaces.end(); ++it) {
+        (*it)->draw(App);            
+    }
 
     App.Display();
 }
@@ -178,5 +191,26 @@ void Game::handle_events()
 
 void Game::handle_input()
 {
+    const sf::Input& Input = App.GetInput();
+    if (Input.IsMouseButtonDown(sf::Mouse::Left) ) {
+        // Get mouse position
+        sf::Vector2f MousePos = App.ConvertCoords(Input.GetMouseX(), Input.GetMouseY(),&App.GetDefaultView());
+        if (App.GetInput().IsMouseButtonDown(sf::Mouse::Left)) 
+        {
+            Entity* clicked = NULL;
+            for (vector<Interface*>::iterator it = interfaces.begin(); it!=interfaces.end(); ++it) {
+                clicked = (*it)->object_with_point(MousePos);            
+            }
+            std::cout << MousePos.x << ", " << MousePos.y << ": " << clicked  << "\n";
+            
+        }
+        
+        cursor_pos.x = MousePos.x;
+        cursor_pos.y = MousePos.y;
+    }
+        
+
     
+    
+
 }

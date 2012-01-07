@@ -9,6 +9,8 @@
 #ifndef GitTest_Entity_h
 #define GitTest_Entity_h
 #include <string>
+#include <iostream>
+
 #include <SFML/Graphics.hpp>
 
 class Entity  {
@@ -16,6 +18,7 @@ protected:
     
 public:
     virtual void draw(sf::RenderWindow &w) = 0;
+    virtual Entity* contains_point(sf::Vector2f point) =0;
 };
 
 

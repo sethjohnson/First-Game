@@ -20,6 +20,7 @@ public:
     void setCenter(float x, float y) { center.x = x; center.y = y;}
     void setDimensions(float x, float y) { dimensions.x = x; dimensions.y = y;}
     void setText(string s) {text=s;}
+    Entity* contains_point(sf::Vector2f point);
 
 protected:
     string text;

@@ -14,11 +14,17 @@
 #include <SFML/Graphics.hpp>
 using std::vector;
 
-class Interface {
+class Interface  {
     
 public:
+    Interface() {
+        
+    }
     vector<Entity*> entities;
     sf::View view;
+    void draw(sf::RenderWindow &w);
+    Entity* object_with_point(sf::Vector2f point);
+
 };
 
 
