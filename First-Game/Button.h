@@ -8,11 +8,11 @@
 
 #ifndef GitTest_Button_h
 #define GitTest_Button_h
-#include "Entity.h"
+#include "Rectangle.h"
 
 using std::string;
 
-class Button : public Entity  {
+class Button : public Rectangle  {
     
 public:
     Button() {
@@ -20,15 +20,13 @@ public:
     }
     void draw(sf::RenderWindow &w);
 
-    void setCenter(float x, float y) { center.x = x; center.y = y;}
-    void setDimensions(float x, float y) { dimensions.x = x; dimensions.y = y;}
     void setText(string s) {text=s;}
-    Entity* contains_point(sf::Vector2f point);
-
+    
+    void setClickedMethod(void (*c)(Entity*)) {clicked = c;}
+    
 protected:
     string text;
-    sf::Vector2f center;
-    sf::Vector2f dimensions;
+    void (*clicked)(Entity*);
 };
 
 

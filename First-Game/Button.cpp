@@ -11,24 +11,15 @@
 
 void Button::draw(sf::RenderWindow &w)
 {
-    w.Draw(sf::Shape::Rectangle(center.x-dimensions.x/2, center.y-dimensions.y/2, center.x+dimensions.x/2, center.y+dimensions.y/2, sf::Color::Black));
+    Rectangle::draw(w);
     
     sf::String string;
+    string.SetColor(sf::Color::White);
     string.SetText(text);
     string.SetSize(dimensions.y*0.75);
     string.SetCenter(string.GetRect().GetWidth()/2, string.GetRect().GetHeight()/2);
-    string.SetPosition(center.x, center.y-string.GetSize()/10);
+    string.SetPosition(Rectangle::center.x, Rectangle::center.y-string.GetSize()/10);
     w.Draw(string);
     
 }
 
-Entity* Button::contains_point(sf::Vector2f point)
-{
-    if (clickable)
-    if ((point.x>center.x-dimensions.x/2) && (point.x < center.x+dimensions.x/2)
-        &&
-        point.y>center.y-dimensions.y/2 && point.y < center.y+dimensions.y/2) {
-        return this;
-    }
-        return NULL;
-}

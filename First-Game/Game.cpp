@@ -9,6 +9,7 @@
 #include "Game.h"
 
 
+
 Game::Game()  : title("Untitled"),
                 FRAME_LIMIT(120),
                 TICKS_PER_SECOND(25),
@@ -188,6 +189,7 @@ void Game::handle_events()
     }
 
 }
+
 
 void Game::handle_input()
 {

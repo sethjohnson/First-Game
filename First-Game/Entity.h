@@ -10,7 +10,6 @@
 #define GitTest_Entity_h
 #include <string>
 #include <iostream>
-
 #include <SFML/Graphics.hpp>
 
 class Entity  {

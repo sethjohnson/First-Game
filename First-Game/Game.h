@@ -35,7 +35,7 @@ private: // Methods
     void handle_input();
     void handle_events();
     long getTickCount();
-
+    
 private: // Variables
     sf::RenderWindow App;
     sf::View   View;
